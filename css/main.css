@@ -74,7 +74,7 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 #siteContainer 
 {
 	margin: 0 auto;
-	width: 920px;
+	width: 980px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -324,9 +324,10 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 }
 /*Page 2 - Notice we are using one style sheet for all of the pages*/
 
-#contentCon {
+#contentCon
+{
 	margin-top: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 7px;
 	display: flex;
 	flex-direction: row;
   	justify-content: flex-start;
@@ -335,19 +336,96 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 /*Get rid of this, here just to give different height to promo*/
 #contentCon p 
 {
-	line-height: 630px;
+	display: flex;
+	color: #fff;
+	font-size: 12px;
+	font-family: Bahnschrift, Arial, sans-serif;
+	margin-left: 20px;
+	line-height: 20px;
+	background-color: #514dbe;
+	margin-right: 368px;
+	
+	
 }
 
-#content1 
+#content1 img
 {
-	width: 440px;
+	display: inline-flex;
+	flex-wrap: wrap;
+
 }
 
-#content2 
+#content1 p
 {
-	margin-left: auto;
-	width: 440px;
+	display: flex;
+	flex-direction: row;
+	color: #fff;
+	font-size: 11px;
+	font-family: Bahnschrift, Arial, sans-serif;
+	line-height: 20px;
+	background-color: #514dbe;
+	margin-left: 20px;
+	margin-right: 855px;
 }
+
+#content2
+{
+	margin-top: 40px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+#content2 img
+{
+	display: inline-flex;
+	float: left;
+	background-color: : #514dbe;
+	margin-left: 400px;
+}
+#content2 p
+{
+	display: flex;
+	flex-direction: row;
+	color: #fff;
+	font-size: 11px;
+	font-family: Bahnschrift, Arial, sans-serif;
+	line-height: 20px;
+	background-color: #514dbe;
+	margin-left: 20px;
+	margin-right: 855px;
+	
+	
+}
+
+#content3 img
+{
+	display: inline-flex;
+	float: left;
+	background-color: : #514dbe;
+	margin-left: 400px;
+	margin-right: 20px;
+}
+#content3 p
+{
+	display: flex;
+	flex-direction: row;
+	color: #fff;
+	font-size: 11px;
+	font-family: Bahnschrift, Arial, sans-serif;
+	line-height: 30px;
+	background-color: #514dbe;
+	margin-left: 20px;
+	margin-right: 855px;
+	margin-bottom: 200px;
+	
+	
+}
+
+
+
+
 
 /*Page 3*/
 
