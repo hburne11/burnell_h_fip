@@ -2,23 +2,97 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Web Page</title>
+<title>Atlantis Aquiarium</title>
 <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
-	<section id="topBar"></section><!--end topBar-->
-	<div id="siteContainer">
-    	<header id="mainHeader">
-        	<div id="logo"><p>Logo</p></div><!--end logo-->
-            <nav id="mainNav"><p>Nav</p></nav><!--end mainNav-->
+    <section id="topBar">
+        <h2 class="hidden">Canada's #1 Tropical Fish Store!</h2>
+    </section><!--end topBar-->
+    <div id="siteContainer">
+        <header id="mainHeader">
+            <div id="logo">
+                <h2 class="hidden">Logo</h2>
+             <img src="images/logo.jpg" width="199" height="199" alt="atlantis aquarium">   
+            </div><!--end logo-->
+            <nav id="mainNav">
+                <h2 class="hidden">Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home   </a></li>
+                    <li><a href="page2.html">Species   </a></li>
+                    <li><a href="page3.html">Contact   </a></li>
+                </ul>
+            </nav><!--end mainNav-->
         </header><!--end mainHeader-->
-        <section id="contentCon">
-        	<div id="content1"><p>Content Area 1</p></div><!--end content1-->
-        	<div id="content2"><p>Content Area 2</p></div><!--end content2-->
-        </section><!--end contentCon-->
+        
+            <h2 class="hidden">Map</h2>
+                <h2>Contact Us!</h2>
+                <p>Have Questions?
+              Fill out the form below and we will get back to you as soon as possible!</p>
+              <form id="contactForm" action="form.php" method="post">
+                    <label for="name">Name: (required)</label>
+                    <input type="text" required id="name" name="fullName" size="30" placeholder="Enter your name">
+
+                    <br>
+                    
+                    <label for="email">Email: (will not be published)</label>
+                    <input type="email" required id="email" size="30" placeholder="Enter your Email">
+                    
+                    <br>
+
+                    <label for="phone">Phone: (required)</label>
+                    <input type="tel" required id="phone" size="30" placeholder="Enter Phone Number">
+
+                    <br>
+                    
+                    <label for="comments">Comments:</label>
+                    <textarea name="comments" id="comments" required cols="50" rows="8"></textarea>
+
+                    <br>
+                    
+                    <label for="human">What is 5 + 4?</label>
+                    <input type="text" required id="human" size="30" placeholder="What is 5 + 4?">
+
+                    <br>
+                   
+                    <input id="submit" type="submit" value="Submit">
+            </form>
+            <!--end contactArea-->
+            <!--end content1-->
+        	<section class="contentMap">
+                <h2>Visit Us!</h2>
+            <ul>
+                    <li>Atlantis Aquarium </li>
+                    <li>London, Ontario </li>
+                    
+                </ul>    
+                <div class="map"><iframe width="300" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=fanshawe%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div><!--end content2-->
+        </section>
+    <!--end contentCon-->
         <footer id="mainFooter">
-        	<div id="footerNav"><p>Footer Nav</p></div><!--end FooterNav-->
-            <div id="copyRight"><p>Copyright Info</p></div><!--end Copyright-->
+            <div id="footerNav">
+             <ul>
+                    <li><a href="index.html">Home   </a></li>
+                    <li><a href="species.html">Species   </a></li>
+                    <li><a href="contact.html">Contact   </a></li>
+                </ul>  
+
+                <img src="images/twitter.svg" alt="facebook" width="50" height="50">
+                <img src="images/youtube.svg" alt="facebook" width="50" height="50">
+                <img src="images/facebook.svg" alt="facebook" width="50" height="50">
+                <img src="images/instagram.png" alt="facebook" width="50" height="50"> 
+            </div><!--end FooterNav-->
+            <div id="copyRight">
+                
+                <ul>
+                    <li> <a href="page5.html">Privacy Policy</a> </li>
+                    <li> <a href="page5.html">Terms & Conditions</a> </li>
+                    <li> <a href="page5.html">Store Address</a> </li>
+                    <li> <a href="page5.html">More Info</a> </li>
+                    
+                </ul>
+            </div><!--end Copyright-->
         </footer><!--end mainFooter-->
     </div><!--end siteContainer-->
 <script src="js/main.js"></script>    
