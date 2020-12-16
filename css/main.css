@@ -8,7 +8,6 @@ p
 {
 	color: #fff;
 	line-height: 100px;
-	background: #000;
 	text-align: center;
 	margin: 0;
 }
@@ -73,22 +72,30 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 #siteContainer 
 {
+
+	display:block;
 	margin: 0 auto;
-	width: 980px;
-	padding-left: 20px;
-	padding-right: 20px;
+	width: 100%;
+	height:100%;
+
+	max-width:980px;
+
+
+	
 }
+
 
 /*This is a flex container*/
 #mainHeader
 {
 	margin-top: 40px;
+	margin-bottom: 0px;
 	padding-bottom: 40px;
 	display: flex;
 	flex-direction: row;
   	justify-content: flex-start;
   	background-color: #5c74d5;
-  	height: 210px;
+  
 
 }
 
@@ -148,20 +155,21 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 #promo p 
 {
 	line-height: 250px;
+	margin-right: 300px;
 }
 
-#promo h2
+#promoImageBig h2
 {
-	margin-left:  500px;
-	margin-top: 300px;
+	margin: 0 auto;
 	background-color: #514dbe;
-	background-size: 100;
+	background-size: 100px;
+	opacity: 80%;
 	font-size: 27px;
 	font-family: Berlin Sans FB Demi, Arial, sans-serif;
 	color: #fff;
+
 }
 
-#promo 
 
 #promoText 
 {
@@ -169,40 +177,80 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 }
 
-#promoImage 
+#promoImageBig 
 {
-	margin-left: auto;
-	width: 280px;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
 }
 
-#productInfo 
+
+.productInfo 
 {
-	margin-top: 40px;
+	margin-top: 20px;
 	display: flex;
 	flex-direction: row;
   	justify-content: space-between;
-	border-bottom: solid 1px #DDD;
 	padding-bottom: 40px;
+	list-style-type: none;
+
 }
 
 /*Get rid of this, here just to give different height to productInfo*/
-#productInfo p 
+.productInfo p 
 {
 	display: flex;
-	text-transform: bold;
 	color: #514dbe;
 	font-size: 27px;
 	font-family: Berlin Sans FB Demi, Arial, sans-serif;
 	margin-left: 20px;
 	line-height: 40px;
 	background-color: #fff;
+	list-style: none;
 }
 
-.productDesc 
+
+.productDescLargeLeft p
 {
-	width: 200px;
+	display: inline-flex;
+	flex-wrap: wrap-reverse;
+	color: #514dbe;
+	font-size: 27px;
+	font-family: Bahnschrift, Arial, sans-serif;
+	margin-left: 0px;
+	line-height: 40px;
+	background-color: #fff;
+}
+
+
+.productDescLargeRight
+{
+	display: flex;
+	display:block;
+	margin: 20px;
+	max-width:100%;
+	
+	width:auto;
+	position: relative;
 	
 }
+
+.productDescLargeRight a
+{
+	list-style-type: none;
+	font-size: 27px;
+	font-family: Bahnschrift, Arial, sans-serif;
+	margin-top: 20px;
+	margin-left: 315px;
+	color: #5c74d5;
+	
+}
+
+.productDescLargeRight a:hover
+{
+	background-color: #a1defb;
+}
+
 
 #productInfo ul
 {
@@ -214,7 +262,6 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
   position: absolute;
   margin-left: 275px;
   display: flex;
-	text-transform: bold;
 	color: #514dbe;
 	font-size: 27px;
 	font-family: Berlin Sans FB Demi, Arial, sans-serif;
@@ -230,7 +277,6 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 #productInfo h2
 {
 	
-	text-transform: bold;
 	color: #514dbe;
 	font-size: 27px;
 	font-family: Berlin Sans FB Demi, Arial, sans-serif;
@@ -241,7 +287,7 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 #mainFooter 
 {
-	margin-top: 40px;
+	margin-top: 15px;
 	padding-bottom: 40px;
 	display: flex;
 	flex-direction: row;
@@ -298,7 +344,7 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 #footerNav img
 {
-	margin-top: : 20px;
+	margin-top: 20px;
 }
 
 #copyRight 
@@ -324,103 +370,57 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 }
 /*Page 2 - Notice we are using one style sheet for all of the pages*/
 
-#contentCon
-{
-	margin-top: 40px;
-	padding-bottom: 7px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: flex-start;
+.contentWrap{
+	display:flex;
+	flex-flow:row nowrap;
 }
 
-/*Get rid of this, here just to give different height to promo*/
-#contentCon p 
+.contentCon
 {
+	margin-top: 20px;
+	padding-bottom: 10px;
 	display: flex;
-	color: #fff;
-	font-size: 12px;
-	font-family: Bahnschrift, Arial, sans-serif;
-	margin-left: 20px;
-	line-height: 20px;
+	width:50%;
+	flex-direction: column;
+	justify-content: space-evenly;	  
+	background: #fff;
+}
+
+.content /* container */
+{
+	display:flex;
+
+	flex-flow:row nowrap;
+	width:100%;
+	height:100%; 
 	background-color: #514dbe;
-	margin-right: 368px;
+
+}
+
+.content img
+{
+	display:block;
+	margin: 20px;
+	max-width:100%;
 	
-	
-}
-
-#content1 img
-{
-	display: inline-flex;
-	flex-wrap: wrap;
+	width:auto;
 
 }
 
-#content1 p
+.content p
 {
-	display: flex;
-	flex-direction: row;
-	color: #fff;
-	font-size: 11px;
-	font-family: Bahnschrift, Arial, sans-serif;
-	line-height: 20px;
-	background-color: #514dbe;
-	margin-left: 20px;
-	margin-right: 855px;
-}
 
-#content2
-{
-	margin-top: 40px;
-	padding-bottom: 40px;
-	display: flex;
-	flex-direction: row;
-  	justify-content: flex-start;
-}
 
-#content2 img
-{
-	display: inline-flex;
-	float: left;
-	background-color: : #514dbe;
-	margin-left: 400px;
-}
-#content2 p
-{
-	display: flex;
-	flex-direction: row;
 	color: #fff;
 	font-size: 11px;
 	font-family: Bahnschrift, Arial, sans-serif;
 	line-height: 20px;
-	background-color: #514dbe;
-	margin-left: 20px;
-	margin-right: 855px;
-	
-	
-}
 
-#content3 img
-{
-	display: inline-flex;
-	float: left;
-	background-color: : #514dbe;
-	margin-left: 400px;
-	margin-right: 20px;
-}
-#content3 p
-{
-	display: flex;
-	flex-direction: row;
-	color: #fff;
-	font-size: 11px;
-	font-family: Bahnschrift, Arial, sans-serif;
-	line-height: 30px;
-	background-color: #514dbe;
-	margin-left: 20px;
-	margin-right: 855px;
-	margin-bottom: 200px;
-	
-	
+
+	margin:0 auto;
+	width:100%;
+
+	padding:10px;
 }
 
 
@@ -429,58 +429,82 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 /*Page 3*/
 
-#productImages 
+#contactArea
 {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
 	display: flex;
 	flex-direction: row;
-  	justify-content: space-between;
+  	justify-content: flex-start;
+  	background-color: #5c74d5;
+  	height: 210px;
 }
 
-/*Get rid of this, here just to give different height*/
-#productImages p
+.contactWrap
 {
-	line-height: 250px;
+	height: 100%;
+	width: 100%;
+	margin-top: 10px;
+	display:flex;
+    background: url('./images/fipbg.jpg') no-repeat scroll center;
+    background-size: 100%;
 }
 
-.productImg 
+.formWrap
 {
-	width: 280px;
+	width: 50%;
+	height: 100%;
+	margin-left: 40px;
+	font-family: Bahnschrift, Arial, sans-serif;
+	font-size: 20px;
+	
 }
 
-
-#contentAreaBig
+.formWrap p
 {
-	margin-top: 40px;
-	border-bottom: solid 1px #DDD;
-	padding-bottom: 40px;
+	font-family: Bahnschrift, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 20px;
+	color: #5c74d5;
+	margin-bottom: 20px;
+	
 }
 
-/*Get rid of this, here just to give different height*/
-#contentAreaBig p 
+textarea, select, input
 {
-	line-height: 300px;
+	width: 100%;
+	resize: none;
 }
 
-#promoImageBig
+input[type=submit]
 {
-	width: 920px;
-	background: url(../images/hero-home.jpg) no-repeat;
-	height: 375px;
+margin-top:30px;
+margin-left: 200px;
+color: blue;
+width: 20%;
+height: 30px;
+
 }
-
-
 /*Page 4*/
 
-.productDescLargeLeft 
-{
-	width: 410px;
-}
 
-.productDescLargeRight 
-{
-	width: 410px;
-}
 
+
+	
+
+@media screen and (max-width: 600px){
+	.hidden{display:none;}
+	body{margin:0;}
+	
+	.siteContainer{
+		display:flex;
+		flex-flow:row wrap;
+		text-align:center;
+		box-sizing:border-box;
+		flex:1 1 100%;
+		border-radius:0px;
+		align-items:center;
+		justify-content:center;
+	}
+
+
+
+}
